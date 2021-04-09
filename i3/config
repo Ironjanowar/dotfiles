@@ -217,3 +217,11 @@ assign [class="TelegramDesktop"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Spotify"] $ws5
+
+# Start playerctl
+exec playerctl daemon
+
+# music controls for Spotify
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
